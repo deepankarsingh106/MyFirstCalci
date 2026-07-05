@@ -129,3 +129,15 @@ window.onload = function () {
 
 }
 
+// to have Dark/Light Theme
+const themeBtn = document.getElementById("theme-btn");
+
+themeBtn.addEventListener("click", () => {
+    document.body.classList.toggle("light");
+
+    if(document.body.classList.contains("light")){
+        themeBtn.textContent = "☀️ Light Mode";
+    }else{
+        themeBtn.textContent = "🌙 Dark Mode";
+    }
+});

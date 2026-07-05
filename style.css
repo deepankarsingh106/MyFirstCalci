@@ -1,3 +1,15 @@
+:root{
+    --bg:#222;
+    --card:#333;
+    --text:white;
+    --button:#555;
+}
+.light{
+    --bg:#eeeeee;
+    --card:#ffffff;
+    --text:#000000;
+    --button:#dcdcdc;
+}
 *{
     margin:0;
     padding:0;
@@ -9,10 +21,10 @@ body{
     justify-content:center;
     align-items:center;
     height:100vh;
-    background:#222;
+    background:var(--bg);
 }
 .calculator{
-    background:#333;
+    background:var(--card);
     padding:20px;
     border-radius:12px;
     width:320px;
@@ -24,6 +36,8 @@ body{
     font-size:28px;
     text-align:right;
     padding:10px;
+    background:white;
+    color:black;
 }
 .buttons{
     display:grid;
@@ -34,11 +48,15 @@ button{
     height:60px;
     font-size:22px;
     cursor:pointer;
+    background: var(--button);
+    color: var(--text);
+    border:none;
+    border-radius:8px;
 }
 .history-container {
     margin-top: 20px;
-    background: #444;
-    color: white;
+    background:var(--card);
+    color:var(--text);
     padding: 15px;
     border-radius: 10px;
     max-height: 200px;
