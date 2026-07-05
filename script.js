@@ -2,18 +2,32 @@
 const historyList = document.getElementById("history");
 
 const display = document.getElementById("display");
+
+// function to add history value to  current
 function append(value){
     display.value += value;
 }
+
+// function to clear history
 function clearDisplay(){
     display.value = "";
 }
+
+// function to delete the last input
 function deleteLast(){
     display.value = display.value.slice(0,-1);
 }
+// function to save the history
 function saveHistory() {
     localStorage.setItem("history", historyList.innerHTML);
 }
+
+// function to square 
+function square(){
+    display.value = Number(display.value) ** 2;
+}
+
+//function to calculate 
 function calculate(){
     try{
         //display.value = eval(display.value);
@@ -52,6 +66,7 @@ document.addEventListener("keydown", function (event) {
     }
 });
 
+// to load the history
 window.onload = function () {
 
     const savedHistory = localStorage.getItem("history");
