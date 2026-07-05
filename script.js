@@ -11,6 +11,9 @@ function clearDisplay(){
 function deleteLast(){
     display.value = display.value.slice(0,-1);
 }
+function saveHistory() {
+    localStorage.setItem("history", historyList.innerHTML);
+}
 function calculate(){
     try{
         //display.value = eval(display.value);
@@ -24,7 +27,7 @@ function calculate(){
         li.textContent = `${expression} = ${result}`;
 
         historyList.prepend(li);
-
+        saveHistory();
     }
     catch{
         display.value = "Error";
