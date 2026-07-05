@@ -1,4 +1,6 @@
 // basic functioning of the Calculator
+const historyList = document.getElementById("history");
+
 const display = document.getElementById("display");
 function append(value){
     display.value += value;
@@ -11,7 +13,18 @@ function deleteLast(){
 }
 function calculate(){
     try{
-        display.value = eval(display.value);
+        //display.value = eval(display.value);
+        const expression = display.value;
+        const result = eval(expression);
+
+        display.value = result;
+
+        const li = document.createElement("li");
+
+        li.textContent = `${expression} = ${result}`;
+
+        historyList.prepend(li);
+
     }
     catch{
         display.value = "Error";
