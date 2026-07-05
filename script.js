@@ -27,6 +27,58 @@ function square(){
     display.value = Number(display.value) ** 2;
 }
 
+// function to square root 
+function sqrt(){
+    display.value = Math.sqrt(Number(display.value));
+}
+
+// function to reciprocal
+function reciprocal(){
+    display.value = 1 / Number(display.value);
+}
+
+// function to implement the sin function 
+function sin(){
+    //  mapping of 90 degree to 1
+    display.value = 
+        Math.sin(Number(display.value) * Math.PI / 180);
+}
+
+
+// function to implement the cos function 
+function cos(){
+    display.value =
+        Math.cos(Number(display.value) * Math.PI / 180);
+}
+
+
+// function to implement the tan function 
+function tan(){
+    display.value =
+        Math.tan(Number(display.value) * Math.PI / 180);
+
+}
+
+// function to implement the log function 
+function log(){
+    display.value = Math.log10(Number(display.value));
+}
+
+// function to implement the Natural Log
+function ln(){
+    display.value = Math.log(Number(display.value));
+}
+
+// function to implement the factorial 
+function factorial(){
+    let n = Number(display.value);
+    let ans = 1;
+    for(let i = 2; i <= n; i++){
+        ans *= i;
+    }
+    display.value = ans;
+}
+
 //function to calculate 
 function calculate(){
     try{
