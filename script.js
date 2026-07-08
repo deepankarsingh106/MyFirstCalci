@@ -15,12 +15,12 @@
     let operator = null;
     let shouldResetDisplay = false;
 
-    const OP_SYMBOL = {
-        "+":"+",
-        "-":"−",
-        "*":"×",
-        "/":"÷"
-    };
+    const OP_SYMBOL = Object.freeze({
+    "+": "+",
+    "-": "−",
+    "*": "×",
+    "/": "÷",
+    });
     const clearActiveOperators = () => {
         document
         .querySelectorAll(".key-op.active")
@@ -187,6 +187,7 @@
     };
 
     const ripple = (btn, e) => {
+        if (!btn) return;
         const rect = btn.getBoundingClientRect();
         const size = Math.max(rect.width, rect.height);
         const x = (e?.clientX ?? rect.left + rect.width / 2) - rect.left - size / 2;
@@ -209,8 +210,10 @@
     };
 
     const handleAction = (action, value, btn, e) => {
-        ripple(btn, e);
-        flashKey(btn);
+        if (btn) {
+            ripple(btn, e);
+            flashKey(btn);
+        }
 
         switch (action) {
         case "clear": clearAll(); break;
@@ -266,6 +269,10 @@
         const [action, value] = entry;
         let selector = `[data-action="${action}"]`;
         if (value) selector += `[data-value="${value}"]`;
+        if (action === "backspace") {
+            backspace();
+            return;
+        }
         const btn = keypad.querySelector(selector);
         if (btn) handleAction(action, value, btn, null);
     });
