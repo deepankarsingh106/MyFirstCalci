@@ -36,3 +36,17 @@
 
 ---
 
+## ✨ Features
+
+- 🎨 Modern Glassmorphism UI
+- ⌨️ Full Keyboard Support
+- 📱 Fully Responsive Design
+- ⚡ Smooth Animations & Ripple Effects
+- 🧮 Number Formatting with Commas
+- ➕ Active Operator Highlighting
+- 📝 Calculation History
+- ❌ Error Handling (e.g., Division by Zero)
+- ♿ Accessibility with ARIA Labels
+- 🚀 Built with Vanilla JavaScript
+
+
