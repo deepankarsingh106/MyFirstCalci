@@ -106,16 +106,11 @@ Or use **Live Server** in VS Code.
 
   ---
 
-## 👨‍💻 Author
+## License & Attributions
 
-**Deepankar Singh**
-
-- GitHub: https://github.com/deepankarsingh106
-- LinkedIn: https://linkedin.com/in/your-linkedin
-
-## 📄 License
-
-This project is licensed under the MIT License.
+- **Deepankar Singh**
+- Powered By Cursor,Claude.
+- This project is licensed under the MIT License.
 
 Feel free to use, modify, and distribute this project under the terms of the MIT License.
 
