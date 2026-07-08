@@ -262,6 +262,5 @@
         const btn = keypad.querySelector(selector);
         if (btn) handleAction(action, value, btn, null);
     });
-
     updateDisplay();
-    })();
+})();
