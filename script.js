@@ -1,6 +1,11 @@
 (() => {
     "use strict";
 
+    const MAX_DIGITS = 15;
+    const FLASH_DURATION = 80;
+    const KEY_PRESS_DURATION = 120;
+    const MAX_DECIMALS = 10;
+
     const display = document.getElementById("display");
     const historyEl = document.getElementById("history");
     const keypad = document.getElementById("calc-keys");
@@ -34,7 +39,7 @@
         return `${parseFloat(str.slice(0, -1)).toLocaleString("en-US")}.`;
     }
 
-    return num.toLocaleString("en-US", { maximumFractionDigits: 10 });
+    return num.toLocaleString("en-US", { maximumFractionDigits: MAX_DECIMALS});
     };
 
     const updateDisplay = (flash = false) => {
@@ -43,7 +48,7 @@
         requestAnimationFrame(() => {
         display.textContent = formatDisplay(currentValue);
         display.classList.toggle("error", currentValue === "Error");
-        setTimeout(() => display.classList.remove("updating"), 80);
+        setTimeout(() => display.classList.remove("updating"), FLASH_DURATION);
         });
     } else {
         display.textContent = formatDisplay(currentValue);
@@ -78,7 +83,7 @@
         } else {
             currentValue = currentValue === "0" ? digit : currentValue + digit;
         }
-        if (currentValue.replace(".", "").length > 15) {
+        if (currentValue.replace(/[-.]/g, "").length) {
             currentValue = currentValue.slice(0, -1);
             return;
         }
@@ -194,7 +199,7 @@
 
     const flashKey = (btn) => {
         btn.classList.add("pressed");
-        setTimeout(() => btn.classList.remove("pressed"), 120);
+        setTimeout(() => btn.classList.remove("pressed"), KEY_PRESS_DURATION);
     };
 
     const handleAction = (action, value, btn, e) => {
