@@ -15,12 +15,17 @@
     let operator = null;
     let shouldResetDisplay = false;
 
+    const OP_SYMBOL = {
+        "+":"+",
+        "-":"−",
+        "*":"×",
+        "/":"÷"
+    };
     const clearActiveOperators = () => {
         document
         .querySelectorAll(".key-op.active")
         .forEach(btn => btn.classList.remove("active"));
     };
-
 
     const formatDisplay = (value) => {
         if (value === "Error") return value;
@@ -58,7 +63,7 @@
 
     const updateHistory = () => {
     if (previousValue && operator) {
-        const opSymbol = { "+": "+", "-": "−", "*": "×", "/": "÷" }[operator] || operator;
+        OP_SYMBOL[operator] || operator;
         historyEl.textContent = `${formatDisplay(previousValue)} ${opSymbol}`;
     } else {
         historyEl.textContent = "";
@@ -70,7 +75,7 @@
         previousValue = "";
         operator = null;
         shouldResetDisplay = false;
-        clearActiveOperators().forEach((k) => k.classList.remove("active"));
+        clearActiveOperators();
         updateHistory();
         updateDisplay();
     };
@@ -83,7 +88,7 @@
         } else {
             currentValue = currentValue === "0" ? digit : currentValue + digit;
         }
-        if (currentValue.replace(/[-.]/g, "").length) {
+        if (currentValue.replace(/[-.]/g, "").length > MAX_DIGITS) {
             currentValue = currentValue.slice(0, -1);
             return;
         }
@@ -132,7 +137,7 @@
     const setOperator = (op) => {
         if (currentValue === "Error") return;
 
-        clearActiveOperators().forEach((k) => k.classList.remove("active"));
+        clearActiveOperators();
 
         if (operator && !shouldResetDisplay) {
             const result = calculate(previousValue, currentValue, operator);
@@ -177,7 +182,7 @@
         previousValue = "";
         operator = null;
         shouldResetDisplay = true;
-        clearActiveOperators().forEach((k) => k.classList.remove("active"));
+        clearActiveOperators();
         updateDisplay(true);
     };
 
@@ -192,7 +197,7 @@
         el.style.width = el.style.height = `${size}px`;
         el.style.left = `${x}px`;
         el.style.top = `${y}px`;
-        btn.appendChild(el);
+        btn.querySelector(".ripple")?.remove();
         el.addEventListener("animationend", () => el.remove());
     };
 
@@ -214,6 +219,7 @@
         case "decimal": inputDecimal(); break;
         case "operator": setOperator(value); break;
         case "equals": equals(); break;
+        case "backspace": backspace();break;
         }
     };
 
