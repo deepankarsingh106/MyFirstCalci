@@ -48,7 +48,10 @@
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
 </p>
 
-## 📂 Project Structure
+## 📂 Project Structure & Layouts
+
+NovaCalc follows a modular architecture where each file has a single responsibility. The HTML file defines the user interface, the CSS file handles the visual design, responsiveness, and animations, while the JavaScript file powers the calculator engine, keyboard shortcuts, display formatting, and interaction logic. This clear separation of structure, styling, and functionality improves readability, maintainability, and future scalability.
+
 
 ```text
 NovaCalc/
