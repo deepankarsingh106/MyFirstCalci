@@ -108,9 +108,9 @@ cd NovaCalc
 
 ### Run the Project
 
-Open `index.html` in your browser.
+* Open `index.html` in your browser.
 
-Or use **Live Server** in VS Code.
+* Or use **Live Server** in VS Code.
 
   ---
 
