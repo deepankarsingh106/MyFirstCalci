@@ -47,3 +47,21 @@
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
 </p>
+
+## 📂 Project Structure
+
+```text
+NovaCalc/
+├── assets/
+│   ├── screenshots/
+│   │   ├── desktop-view.png
+│   │   ├── keyboard-support.png
+│   │   └── calculator-demo.png
+│   └── favicon.ico
+├── index.html
+├── style.css
+├── script.js
+├── README.md
+├── LICENSE
+└── .gitignore
+```
