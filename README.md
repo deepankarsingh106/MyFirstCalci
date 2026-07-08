@@ -19,3 +19,26 @@
 </p>
 
 
+## 📸 Screenshots
+
+### 🖥️ Desktop View
+
+<p align="center">
+  <img src="./DeskTop_View.png" alt="NovaCalc Desktop" width="700">
+</p>
+
+---
+
+### ⌨️ Keyboard Support
+
+<p align="center">
+  <img src="./Mobile_View.png" alt="NovaCalc Keyboard Support" width="700">
+</p>
+
+---
+
+### ✨ Calculator in Action
+
+<p align="center">
+  <img src="./Mobile_View2.png" alt="NovaCalc Demo" width="700">
+</p>
