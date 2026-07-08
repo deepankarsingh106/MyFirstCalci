@@ -63,7 +63,7 @@
 
     const updateHistory = () => {
     if (previousValue && operator) {
-        OP_SYMBOL[operator] || operator;
+        const opSymbol = OP_SYMBOL[operator] || operator;
         historyEl.textContent = `${formatDisplay(previousValue)} ${opSymbol}`;
     } else {
         historyEl.textContent = "";
@@ -175,7 +175,7 @@
         }
 
         historyEl.textContent = `${formatDisplay(previousValue)} ${
-        { "+": "+", "-": "−", "*": "×", "/": "÷" }[operator]
+            OP_SYMBOL[operator]
         } ${formatDisplay(currentValue)} =`;
 
         currentValue = String(result);
@@ -198,6 +198,7 @@
         el.style.left = `${x}px`;
         el.style.top = `${y}px`;
         btn.querySelector(".ripple")?.remove();
+        btn.appendChild(el);
         el.addEventListener("animationend", () => el.remove());
     };
 
