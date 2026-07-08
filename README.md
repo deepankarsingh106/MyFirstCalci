@@ -65,3 +65,58 @@ NovaCalc/
 ├── LICENSE
 └── .gitignore
 ```
+  --- 
+
+## ⌨️ Keyboard Shortcuts
+
+| Key | Action |
+|------|--------|
+| 0–9 | Enter digits |
+| + | Addition |
+| - | Subtraction |
+| * | Multiplication |
+| / | Division |
+| . | Decimal Point |
+| Enter | Calculate Result |
+| Backspace | Delete Last Digit |
+| Escape | Clear Calculator |
+| % | Percentage |
+
+   --- 
+
+## 🚀 Getting Started
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/NovaCalc.git
+```
+
+### Navigate to the Project
+
+```bash
+cd NovaCalc
+```
+
+### Run the Project
+
+Open `index.html` in your browser.
+
+Or use **Live Server** in VS Code.
+
+  ---
+
+## 👨‍💻 Author
+
+**Deepankar Singh**
+
+- GitHub: https://github.com/deepankarsingh106
+- LinkedIn: https://linkedin.com/in/your-linkedin
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+Feel free to use, modify, and distribute this project under the terms of the MIT License.
+
+
