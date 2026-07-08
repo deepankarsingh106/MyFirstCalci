@@ -19,7 +19,10 @@
 </p>
 
 
-## 📸 Screenshots
+<h1 align="center">
+     Screenshots
+</h1>
+
 
 ### 🖥️ Desktop View
 <p align="center">
