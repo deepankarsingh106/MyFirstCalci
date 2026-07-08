@@ -24,7 +24,7 @@
 ### 🖥️ Desktop View
 
 <p align="center">
-  <img src="./DeskTop_View.png" alt="NovaCalc Desktop" width="700">
+  <img src="assets/Screenshots/DeskTop_View.png" alt="NovaCalc Desktop View" width="800">
 </p>
 
 ---
@@ -32,13 +32,13 @@
 ### ⌨️ Keyboard Support
 
 <p align="center">
-  <img src="./Mobile_View.png" alt="NovaCalc Keyboard Support" width="700">
+  <img src="assets/Screenshots/Mobile_View.png" alt="NovaCalc Keyboard Support" width="800">
 </p>
 
 ---
 
-### ✨ Calculator in Action
+### ✨ Calculator Demo
 
 <p align="center">
-  <img src="./Mobile_View2.png" alt="NovaCalc Demo" width="700">
+  <img src="assets/Screenshots/Mobile_View2.png" alt="NovaCalc Demo" width="800">
 </p>
