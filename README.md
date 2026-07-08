@@ -32,7 +32,7 @@
 ### ⌨️ Keyboard Support
 
 <p align="center">
-  <img src="assets/Screenshots/Mobile_View.png" alt="NovaCalc Keyboard Support" width="800">
+  <img src="assets/Screenshots/Mobile_View2.png" alt="NovaCalc Keyboard Support" width="800">
 </p>
 
 ---
@@ -40,5 +40,5 @@
 ### ✨ Calculator Demo
 
 <p align="center">
-  <img src="assets/Screenshots/Mobile_View2.png" alt="NovaCalc Demo" width="800">
+  <img src="assets/Screenshots/Mobile_view.png" alt="NovaCalc Demo" width="800">
 </p>
