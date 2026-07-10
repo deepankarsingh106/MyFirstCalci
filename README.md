@@ -10,6 +10,8 @@
   A calculator featuring glassmorphism, keyboard shortcuts, and accessible design and focused on usability, responsiveness, and clean design.
 </p>
 
+## 🌐 Live Demo
+https://nova-calc-beryl.vercel.app/
   --- 
 
 <h1 align="center">
